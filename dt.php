@@ -7,32 +7,42 @@
 <style>
         form {
                 border: 2px solid black;
-                margin : 5px ;
-                padding : 15px;
+                margin: 5px;
+                padding: 15px;
                 width: 450px;
                 height: 450px;
-                
+
         }
+
         form input {
                 text-align: center;
         }
+
         p {
                 background-color: red;
                 text-align: center;
         }
 </style>
+
 <body>
+
         <?php
         $cd = $_POST["dai"];
         $cr = $_POST["rong"];
         $dt = $cd * $cr;
         ?>
-        <form method="post">
-                <p> <b>TÍNH DIỆN TÍCH</b></p>
-                Chiều Dài : <input type="text" name="dai" class="form-control" value="<?php echo $_POST["dai"] ?>"> <br> <br>
-                Chiều Rộng : <input type="text" name="rong" class="form-control" value="<?php echo $_POST["rong"] ?>"> <br> <br>
-                Diện tích : <input type="text" name="dt" id="dt" class="form-control" value="<?php echo $dt; ?>"> <br> <br>
-                <input type="submit" name="submit" value="Tính" class="btn btn-success">
-        </form>
+        <center>
+                <form method="post">
+                        <p> <b>TÍNH DIỆN TÍCH</b></p>
+                        Chiều Dài : <input type="text" name="dai" class="form-control"
+                                value="<?php echo $_POST["dai"] ?>"> <br> <br>
+                        Chiều Rộng : <input type="text" name="rong" class="form-control"
+                                value="<?php echo $_POST["rong"] ?>"> <br> <br>
+                        Diện tích : <input type="text" name="dt" id="dt" class="form-control"
+                                value="<?php echo $dt; ?>"> <br> <br>
+                        <input type="submit" name="submit" value="Tính" class="btn btn-success">
+                </form>
+        </center>
 </body>
+
 </html>
